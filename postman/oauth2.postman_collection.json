@@ -218,7 +218,7 @@
 			"response": []
 		},
 		{
-			"name": "User Status Check Via API Gateway",
+			"name": "Gateway Get User Status Check",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -296,6 +296,92 @@
 						"localhost"
 					],
 					"port": "8091",
+					"path": [
+						"albums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "default"
+						},
+						{
+							"key": "username",
+							"value": "alihan.bayraktar",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "photo-app-code-flow-client",
+							"type": "default"
+						},
+						{
+							"key": "client_secret",
+							"value": "K6Qt5k3Z3PDMSzneF4ftPUHtlAk4PwFY",
+							"type": "default"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/appsdeveloperblog/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"appsdeveloperblog",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway Get Albums",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIxQnV2SXpsSjEyTmJkRlV1cm9wYXlQVjRaNTladFczQnBkQk00U202X293In0.eyJleHAiOjE2NjE0MzkzMjcsImlhdCI6MTY2MTQzOTAyNywianRpIjoiY2Q5NmZhZmUtZjViNS00NjI2LThmMjUtNjYzZWJjNjA2MzIyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9hcHBzZGV2ZWxvcGVyYmxvZyIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJlODYxYmQ5Zi0wZTcyLTQ2NDctYjdmOS03M2E1MjM4ZTg4ZWIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwaG90by1hcHAtY29kZS1mbG93LWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiIwYmQzMWNhOS03NTVmLTQzYzMtYTcyMy1lYzAzMTg5NGQ2MjkiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtYXBwc2RldmVsb3BlcmJsb2ciLCJvZmZsaW5lX2FjY2VzcyIsImRldmVsb3BlciIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInNpZCI6IjBiZDMxY2E5LTc1NWYtNDNjMy1hNzIzLWVjMDMxODk0ZDYyOSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkFsaWhhbiBCYXlyYWt0YXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhbGloYW4uYmF5cmFrdGFyIiwiZ2l2ZW5fbmFtZSI6IkFsaWhhbiIsImZhbWlseV9uYW1lIjoiQmF5cmFrdGFyIiwiZW1haWwiOiJhbGloYW4uYmF5cmFrdGFyQGJheXJrdGxpaG4uaW8ifQ.eRMclw38wRx9POOokTcY_xxwvlIQlN0XX31xf9eIS62-wIZEgWjV-7euee3U71lv4GqcHRD8FOk4gukyONlPL2886UTuQGFfUYKNFUaKVdlsQf8TyriAX-czHldxwu1HRZdHVk9cbr-ndChrTTH419g0nqnLZhNMdAgYo3Fk-YwLRTimxbjd5L-Yo2YcAsE1RXvYxhuaji7zkm4s1CgGvH60wBZ63TgPhYdWSPmDKbYdi0BQnlq0DaJyQWrxcHv8g5DsW0eUZeIJQSt8xAYPZ34vMNslpmBR0kHmEHhLyozE4_f6arrXtjR4-dzVpwtXJ0RpX8ymGfIj1EGdLgfpdg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/albums",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
 					"path": [
 						"albums"
 					]
