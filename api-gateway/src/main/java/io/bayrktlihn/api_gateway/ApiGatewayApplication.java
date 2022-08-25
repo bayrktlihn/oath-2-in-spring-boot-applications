@@ -2,10 +2,9 @@ package io.bayrktlihn.api_gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-/**
- * Hello world!
- */
+@EnableEurekaClient
 @SpringBootApplication
 public class ApiGatewayApplication {
     public static void main(String[] args) {

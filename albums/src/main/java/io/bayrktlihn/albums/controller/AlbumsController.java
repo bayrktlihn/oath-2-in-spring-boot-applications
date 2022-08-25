@@ -14,8 +14,8 @@ public class AlbumsController {
     @GetMapping
     public List<AlbumRest> getAlbums() {
         List<AlbumRest> albums = new ArrayList<>();
-        albums.add(new AlbumRest("albumIdHere", "1", "Album 1 title", "Album 1 description", "Album 1 URL"));
-        albums.add(new AlbumRest("albumIdHere", "2", "Album 2 title", "Album 2 description", "Album 2 URL"));
+        albums.add(new AlbumRest("albumIdHere", "1", "Album one title", "Album one description", "Album 1 URL"));
+        albums.add(new AlbumRest("albumIdHere", "2", "Album two title", "Album two description", "Album 2 URL"));
 
         return albums;
     }
