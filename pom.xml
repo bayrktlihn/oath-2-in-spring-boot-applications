@@ -84,6 +84,8 @@
         <module>photo-app-web-client</module>
         <module>social-login-web-client</module>
         <module>spa-example</module>
+        <module>legacy-users-service</module>
+<!--        <module>my-remote-user-storage-provider</module>-->
     </modules>
 
 
